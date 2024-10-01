@@ -1,0 +1,90 @@
+---
+title: "Final Project - Annual Survey of Jails"
+author:
+  - Ramsha Rauf
+  - Sirohi Kumar 
+  - Xinxin Zhang
+  - Janeth Covarrubias
+date: "Last updated on `r Sys.Date()`"
+output: html_document
+bibliography: final-project.bib
+csl: ./resources/chicago-author-date.csl
+---
+
+### What is the Annual Survey of Jails Dataset? 
+
+The Annual Survey of Jails is a dataset collected and maintained by the Bureau of Justice Statistics (BJS) under the U.S. Department of Justice. The curation of this dataset happens in collaboration with the Research Triangle Institute (RTI). The purpose of the ASJ is to collect data on the characteristics of American jails and their inmates using representative sampling.
+
+As defined by the ASJ, jails are local, short-term holding facilities under the jurisdiction of a city, local district, or country @Office. There is a slight ambiguity between jails and prisons. While jails are short-term holdings for those awaiting trial or sentencing, prisons are long-term holdings for those who are sentenced @Prison. The ASJ's definition of a jail is drawn at the jurisdictional level, so anything that is not explicitly under a single legal jurisdiction is not reported on.
+
+The ASJ also collects valuable demographic information on the jail population including average daily population, rated capacity, supervised unconfined population, admissions and releases, jail population by sex, race, and conviction status, juvenile population, and the number of inmates held for state and federal authorities. It also collects data on the non-inmate side, including about the jail's budget, staffing, and capacity.
+
+Uses of the dataset The purpose of data collection in jails is to curate information on individuals' age, gender, ethnicity, and race, in addition to the crimes of people who have been jailed. The US Department of Justice states that the ASJ's "data is used to track growth in the number of jails and the capacities nationally, changes in the demographics of the jail population and supervision status of persons held, the prevalence of crowding issues, and a count of non-U.S. citizens within the jail population. The data are intended for a variety of users, including Federal and State agencies, local officials in conjunction with jail administrators, researchers, planners, and the public" @Justice. Another purpose of this data set is to keep track of jail operations and examine the different aspects of jail conditions: jail capacity, staffing, and facility characteristics which can help the government plan for budgets and further planning. This data is often used to support or disprove narratives about the kinds of people who are in jail and what they're being punished for. For instance, criminal justice researchers use the ASJ to help the public understand the jail system and inform them of policy decisions and plans underway.
+
+### **Dataset Structure and Infrastructure**
+
+For the ASJ, a representative sample of local jails are contacted by the RTI and asked to complete a survey about their jails @bjsasj. The data is then collated, organized, and made available by the BJS. The survey recognizes that not all jails collect the same data, and accommodates these differences by allowing each jail to provide reasonable estimates, as long as they indicate (by checking a box) what data is an estimate. There are no guidelines for what exactly \"reasonable estimates\" are. 
+
+The survey asks for data from a specific day of each year -- June 30th -- which marks the middle of the year. This date is meant to be the most representative of the rest of the year, as the populations in jails change the most around the winter holiday times @bjs. Once the survey is complete, it\'s submitted to the BJS, either through their website, by email, or by fax. If a jail needs to change their data after the data collection period has closed, they can change it by contacting the BJS over email. 
+
+Research Triangle Institute (RTI) has its criteria for jails which they use to determine a representative sample, and each jail selected is given an ID unique to RTI (RTIID). The BJS further provides an ID for each jurisdiction in which jails operate: \"Jail reporting units are identified by the 21-digit GID-government identification codes that the U.S. Census Bureau uses to identify governments in the United States based on the 2009 Census of Governments. The GID code identifies the general location of governments, and indicates whether they are state, county, city, place, or municipality organizations (p.5).\" @Office
+
+Within the dataset, each row is a unique observation: a single jail. Columns contain the data collected in the survey, including things like city, county, and region of jail in the country. The statistics we can draw from the data include but are not limited to the following: the ratio of inmates by race, the jail population, the number of jails in each city, etc. 
+
+There are some categorical variables that can help with the navigation of this dataset. For example, JURISID indicates what jurisdiction the jail falls under, the CITY where the jail is located, and COUNTY is the county where the jail is located. 
+
+The main residual category is OTHEROFFSPEC: \"On June 29, 2018, how many persons CONFINED in [your jail facilities / this facility], regardless of conviction status, had an offense type of\... other?\", and if prisoners have multiple charges, they\'re supposed to report their most serious offense @ICPSR. This means that if prisoners have multiple charges, especially if they\'re different types of crimes, that variation will not be reflected by the survey. This residual category might fail to accurately record the range of crime types of inmates. 
+
+Numeric variables like CONF_POP record the confined population at mid-year in each prison. The following question was posed to each prison: \"How many persons under the supervision of your [jail jurisdiction / jail] were\... CONFINED in [your jail facilities / this facility]?\" The data documentation goes on to specify the people who should be included/excluded from this population. For instance, people who are working in community-based programs but return to jail at night to sleep should be counted, but prisoners who are on long-term transfer to other jurisdictions are not considered part of the population. 
+
+The definitions for convicts are designed to determine the residential population of prisons. However, there was a social process through which \"residence\" was determined, part of which was the assertion that people who sleep at a place reside there, even if they don\'t spend time there outside of sleeping. Defining \"residents\" was a social process. 
+
+### **History of the dataset and who made it**
+
+The ASJ began in 1982 as a response to the need for more systematic and standardized data collection on jails at a national level. The criminal justice system recognized the importance of understanding the characteristics and trends in jail populations across both times and huge geographical areas. The decision to start the Annual Survey of Jails in 1982 was driven by the need for accurate and up-to-date information to inform policy, guide resource allocation, and support research related to local jails.
+
+From 1982 to 2014, the ASJ was collected and curated by the Bureau of Justice Statistics (BJS). According to their mission, the BJS \"builds and maintains respect and trust through clear public commitments to professional practice and transparency in all that they do [and] should actively engage with users in determining priorities for data collection and analysis, make their data available widely on an equal basis to all users, formally and informally, and fully inform users of the strengths and weaknesses of the data.\"(pdf) Members from this institution must be independent of political and other undue external influences that might affect the collection, analysis, or reporting processes of data and appear as manipulated for political or other purposes. 
+
+BJS stopped collecting data in 2014 because of its dual responsibility to conduct a Census of Jails. The BSJ failed to collect data for the Annual Survey of Jails (which surveys a representative sample) when it conducted the Census of Jails every five to six years, which led to a regular gap in data every year the Census was conducted, so BJS contracted this responsibility to the Research Triangle Institute (RTI). RTI was responsible for the data collection of ASJ to ensure there wouldn\'t be a gap in the data whenever the Census was conducted. BJS supervises the data collection work done by RTI, to meet and be consistent with their standardization of data collection of ASJ\'s history.
+
+From 2015 to 2017, RTI switched its reporting on the inmate count period from mid-year (the last weekend of June) to the end of the year (December 31). We have not been able to find documentation on why this is the case. However, they quickly reverted to their original practice of reporting the inmate count in the mid-year because of the seasonal variation that occurs towards the end of the year, as the jails typically hold fewer inmates during the end of the year compared to mid-year @bjs2. The mid-year count offers a more stable and representative view of the jail population. 
+
+### **BJS** 
+
+The primary role of the Bureau of Justice Statistics (BJS), under the U.S. Department of Justice, is to collect, analyze, and disseminate statistical information on crime, criminal offenders, victims of crime, and the operation of justice systems at all levels of government across America. The Annual Survey of Jails (ASJ) is one of several programs conducted by the BJS.
+
+The BJS contributes to the public\'s understanding of the criminal justice system in the US. Researchers, policymakers, and the public use this data to inform discussions, policies, and decisions related to the federal criminal justice system. The BJS serves as a key source for comprehensive statistics in this domain.
+
+### **RTI**
+
+The Research Triangle Institute (RTI) collaborates with government agencies, including the Bureau of Justice Statistics (BJS), to conduct surveys, gather data, and analyze information related to the jail system in the United States. 
+
+Since 2015, the ASJ has been collected by RTI. RTI is \"an independent nonprofit research institute dedicated to improving the human condition\" @RTI. Their vision is to address the world's most critical problems with science-based solutions in pursuit of a better future. RTI was founded in 1958 by universities, government, and business leaders. In carrying out the ASJ, RTI staff have \"developed working relationships with every eligible jail jurisdiction in the United States\" @RTI. They aim to \"generate national, state, and local data on correctional facility operations and inform strategies to improve the health, safety, and well-being of those who live and work in correctional facilities\" @RTI. They have provided a high level of transparency in their data collection process, including but not limited to what they do with null values and outliers, how long it takes to complete the surveys of data collection, and how they are improving the data collection. They also make public their response rate. 
+
+### **ICPSR**
+
+One of the main repositories where the ASJ is stored is one owned by the Inter-University Consortium for Political and Social Research (ICPSR). ICPSR is a collection of over 750 academic and research institutions, which serves as both a data archive and a resource for training around data access, curation, and analysis. ICPSR has a working relationship with several US government bureaus around data stewardship and research projects. ICPSR is run by a Council of 12 elected representatives, who serve four-year terms, with a new chair chosen biennially. Members of ICPSR must be members of an institute of higher education or a subunit thereof (such as a lab or department). All members in good standing can vote in the election of Councilors. There are annual membership dues, which could be a barrier to membership of ICPSR. Membership is not a requirement for providing data for ICPSR\'s archive. There are high standards for what data is accepted into ICPSR\'s archives, which are public. These requirements are around Quality, Preservation, Access, Confidentiality, and Citation. For each of these stages, they have guides on how \"best\" to curate data for deposit into their archives @Data. However, after data is submitted an ICPSR curator will provide feedback on the data and make recommendations for changes. This process happens between the submitter and curator internally, and thus the curating process is unavailable to the public. \
+
+### **How to use the ASJ dataset?**
+
+Users may access the ASJ dataset from the official website of the Bureau of Justice Statistics @Bjs3. For legality reasons, users will need to download locally the data themselves from ICPSR with an account. After the user logs in to the ICPSR, the user will see a whole list of datasets, each with a unique ID. For example, in the 2013 dataset, the ICPSR is 35517. Because the ASJ dataset has been collected since 1982 and the latest one was published in 2021, the user has to select the specific year and navigate to the specific one. The user has the option to show or hide the summary for each year's dataset. By clicking the \"more options\" button, the user can navigate the datasets by adding different filters: time period, funding agency, restriction types, subject terms, data file format, recent releases, type of analysis, geography, and data availability. Besides filters, the user can also search by different categories related to datasets in general, such as Studies, Data-related publications, Variables, and Series, with specific filters applicable to each category. 
+
+When the user clicks one specific dataset, the user will be directed to another webpage. On the webpage, the user would have access to data documentation, which is the specific explanation of the dataset, as well as project scopes, methodology, versions, and analysis information in detail. Moreover, the user could not only browse the dataset online with the button \"Explore Data\", but also do the \"SDA Analyze Online\" feature(refer to the attached screenshot to see more details). 
+
+The last option is to directly download the dataset, and it would be helpful for the user to make sure to download the correct year edition as a delimited file (.tsv or tab-separated values). 
+
+![](https://lh7-us.googleusercontent.com/45ZruviSY-hg-XbptRZPBpXXFL4xC8rZ0KEgI16KvUTPocRdL28UYDzje9BK-MS-xfLBpmXGjTVNbaoue5sEY8w1n-DXUBmrg8-nxtiaFMFKd6aUEebnZae3RRvCWeSrqHKKbdpB_kFaF67wlDkVY-k)
+
+For either option (browse online or download), it\'s important to filter to the specific categories and the correct versions. The SDA Analyze online tool is a bit outdated, and the downloaded version is in the raw data format, so there\'s no preference between one over the other and the user might choose whatever works best for them. 
+
+### **Limitations of the data set** 
+
+Despite being a primary source for national statistics on American jail populations, the ASJ is not without its flaws @FAQ. One common critique is that the data collected is not representative or robust enough because it\'s a sample, rather than a census. Tracy Velázquez, a Senior Project Manager with Pew Charitable Trust, argued that the data collected by the ASJ is outdated and spotty: \"There\'s limited information that they release on the people who are in jail via demographics. For example, there\'s no information on admissions by race or ethnicity at all\" @Wertheimer_Velázquez_2023. While it\'s worth noting that Velázquez, in that piece, was promoting the Jail Data Initiative, an alternative source of statistics about jails, her critique is not uncommon. Many people with experience in the field, like Velázquez, find the ASJ\'s data is weak. 
+
+BJS has made efforts to address this critique, including changing the day of year when they collect their data. However, this change was quickly reversed,  and they went back to their original data collection date. One of the biggest advantages touted over the ASJ by resources like the Jail Data Initiative is how much more information it collects (more detailed demographics of prisoners by admission to jails) and from how many more places (collecting data from almost a third of America\'s jails) @Jail_Data_Initiative. 
+
+Another possible limitation or weakness of the dataset comes from its actual methods of data collection. As mentioned in the \"Data Structure and Infrastructure\" section, the data is collected by RTI\'s surveying of individual jails. To accommodate for the variation in data collected by jails across the country, the ASJ allows for jails to provide reasonable estimates, and to their credit, indicates which measures are estimates. However, this does raise concerns about consistency: from year to year within a singular jail, to jail-to-jail differences, different survey completers might differently define \"reasonable\". This lack of consistency across jails also raises concerns about the completeness of data if jails are not providing demographic data, as evidenced by Velázquez\'s critique.
+
+### **Conclusion** 
+
+While there are other resources that collect data from more jails than the ASJ does, the fact is that there is a serious dearth of data about American prisons and their occupants. The existence of more datasets about jails, including and especially those which are as old as the ASJ, cannot be understated. Access to the dataset is intuitive and allows the user to filter to specific time periods, geographic locations, and other variables. Lastly, the collaboration between BJS and RTI has demonstrated that the ASJ can adapt and evolve to improve on issues it might have.

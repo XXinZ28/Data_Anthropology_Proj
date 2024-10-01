@@ -1,0 +1,184 @@
+---
+title: "SDS 237 Group Contract"
+author:
+ - Sirohi Kumar
+ - Ramsha Rauf
+ - Xinxin Zhang
+ - Janeth Covarrubias
+date: "Last updated on `r Sys.Date()`"
+output: html_document
+---
+
+```{r eval=FALSE, include=FALSE}
+#Fill out this document by replacing all sections that say 'FILL ME' with your responses. Save the document, and then click in the 'knit' button in the navbar above to create a PDF of this document. 
+```
+
+Working in groups can be both incredibly rewarding and incredibly challenging. The most effective collaborations explicitly outline group roles, expectations, and procedures in advance to coordinate how the group will operate, to establish mechanisms of accountability, and to mitigate the risk of conflict. It is important that, throughout the semester, you address group concerns as they come up. This may involve assigning someone to check in with team members that are falling behind, establishing expectations for attending office hours and asking for help, calling team meetings to discuss issues, or reaching out to the instructor to resolve enduring and unresolved conflicts.		
+
+# CONTACT INFORMATION
+
+|Names|Emails|
+|-----|-----|
+| Sirohi Kumar | skumar87@smith.edu |
+| Xinxin Zhang |  |
+| Ramsha Rauf | rrauf@smith.edu |
+| Janeth Covarrubias Perez | jcovarrubiasperez@smith.edu |
+
+# ROLES
+
+## Who will be responsible for scheduling meetings and hosting Zoom calls? 
+
+Ramsha
+
+## Who will be responsible for facilitating discussion during team meetings?
+
+Ramsha 
+
+## Who will be responsible for taking notes and recording decisions during meetings?
+
+Sirohi
+
+## Who will be responsible for emailing the professor with questions?
+
+Sirohi
+
+## Who will be responsible for requesting group assignment extensions?
+
+Sirohi
+
+## Who will be responsible for setting deadlines for drafts? 
+
+Xinxin
+
+## Who will be responsible for checking in with team members when drafts are late?
+
+Xinxin
+
+## Who will be responsible for reviewing all materials before submission?
+
+Everyone
+
+## Who will be responsible for submitting assignments?
+
+Janeth
+
+
+# COLLABORATIVE WORKSPACES
+
+## Where will the team keep meeting notes? 
+
+Google Drive Folder
+
+## Where will the team store drafts of assignments? 
+
+Google Drive Folder. Github for final submissions
+
+## Through what channels will the team communicate when not meeting?
+
+iMessage
+
+## What is the expected response time for emails and messages? 
+
+6 hours during day time and 10 hours over night.
+
+
+# MEETINGS
+
+## How often will the team meet? 
+
+Once a week. If nothing is due we don't have to meet.
+
+## What days/times will the team meet?
+
+Saturday 3:30. 
+
+## How long will meetings be?
+
+1 hour or less. 
+
+## How will you make decisions during meetings (e.g. consensus, a vote)?
+
+consensus.
+		
+## What strategies will you use to stay on task during meetings?
+
+List of tasks that are generated to previous meetings and check in at the beginning of each meeting.
+
+## How should team members inform each other if they are going to be late to a meeting?
+
+Through iMessage.
+			
+## When is it ok for a team member to skip a meeting? How soon should they inform the group?
+
+Serious scheduling conflict/ emergency. As soon as possible.
+
+## What will you do if a group member is chronically absent from or late to meetings?
+
+Have them look at notes, whatever is left to do they will take those tasks. 
+
+## What will you do if a group member is consistently not participating in meetings?
+
+Check-in and ask if they want to do something else. 
+
+## What are your expectations for respectful engagement and communication during meetings and in collaborative workspaces? What will you do if a member of your team does not meet these expectations?
+
+Not talking over each other, giving others a chance to speak, asking questions, respecting questions, respecting other people's time, be responsive. 
+
+Check-in with the members.
+
+# ASSIGNMENTS
+
+## How will you ensure that all team members fully understand assignment expectations? What will you do if your team is unsure how to complete an assignment?
+
+Check in if sections are too difficult. Ask questions on Slack or go to office hours. 
+Have regular check-ins
+
+## How will you ensure that all team members are contributing equitably to assignments?
+
+Make sure task distributions feel doable. If someone is unsure about a task ask for help and then take a bigger role for the next assignment. 
+
+## How soon in advance of deadlines do you expect all team members to share drafts of their work?
+
+48 hours.
+
+## What will be your process for reviewing each other’s work before submission?
+
+Read over and rotate with each member to check work.
+
+## What will you do if the quality of a team member’s work does not meet the group’s expectations? When is it permissible to revise another team member’s work?
+
+Respectfully add feedback, suggest ideas, and not change anything without communicating. 
+
+## What are your expectations around punctuality regarding group deadlines? How should team members inform each other if they need an extension?
+
+Check in 48 hours before deadline and be realistic to see if you'll be able to complete work.
+
+## What will you do if a student is consistently late in submitting draft work?
+
+Check-in and possibly swap tasks.
+
+## What will you do if you discover that a team member’s work violates the Academic Code of Conduct?
+
+Bring it up in team meetings and rephrase/change it.  
+
+# SIGNATURES
+
+* I participated in drafting the standards, roles, and procedures outlined in this document.
+* I agree to abide by the terms and conditions outlined in this document.			
+* I understand that failing to abide by the terms and conditions outlined in this document may impact my grade.
+ 							
+Signature: Ramsha Rauf
+Date: `r format(Sys.time(), '%d %B, %Y')`
+
+Signature: Sirohi Kumar
+Date: `r format(Sys.time(), '%d %B, %Y')`
+
+Signature: Xinxin Zhang
+Date `r format(Sys.time(), '%d %B, %Y')`
+
+Signature: Janeth Covarrubias
+Date: `r format(Sys.time(), '%d %B, %Y')`
+
+```{r eval=FALSE, include=FALSE}
+#In the Git tab in your Environment pane, stage and commit your changes, and then push them to your GitHub repo.  
+```
