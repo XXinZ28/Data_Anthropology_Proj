@@ -1,0 +1,57 @@
+---
+title: "SDS 237 - Mini-Project: Interview Questions"
+author: "YOUR NAME HERE"
+date: "Last updated on `r Sys.Date()`"
+output: pdf_document
+---
+
+> Enter your interview questions below:
+
+## Questions for Jean Ferguson
+1. Can you briefly describe your career trajectory? 
+	
+2. If you bump into a person in the grocery store, and they ask what do you do, what would you say?
+	
+3. What does it mean to you, to work in the field of Digital Scholarship?
+	
+4. What motivated you to get involved in this work?
+	
+5. Can you describe a project that you have worked on that brings you pride?
+	
+6. What are some tedious things in your day to day work? And how do you feel about engaging those tedious things?
+
+7. What are somethings that surprised you after you enter the digital scholarship field? Something you didn't know before. 
+	
+8. What is special to you, to work in field of digital scholarship in the library? 
+	
+9. What do you think the challenges digital scholarship are facing nowadays? And what people in the field could do better? 
+	
+10. What is your favorite things to work in the Library at Smith?
+
+
+## Questions for Colin Van Alstine
+1. Can you briefly describe your academic and career trajectory? 
+
+2. If you bump into a person in the grocery store, and they ask what do you do, what would you say?
+
+3. What does it mean to you, to work in the field of Metadata?
+
+4. What motivated you to get involved in this work?
+
+5. Can you describe a project that you have worked on that brings you pride?
+
+6. What are some tedious things in your day to day work? And how do you feel about engaging with them?
+
+7. What brings you joy in your work and why?
+
+8. Can you describe a moment that you feel quite challenging at work and how do you deal with it?
+
+9. What is special to you, to work in field of metadata in the library? 
+
+10. What do you think the challenges metadata are facing nowadays? And what people in the field could do better? 
+
+11. What is your favorite things to work in the Library?
+
+	
+
+
