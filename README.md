@@ -1,1 +1,1 @@
-# Data_Anthropology_Proj
+In this repository, I archived the projects I completed in the course Data Anthropology, including the infrastructure anaysis of UNESCO Cultural Statistics (2019), Interview and writeup of two digital scholars, and the user guide for Annual Survey of Jail Dataset (2018). 
